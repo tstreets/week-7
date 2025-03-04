@@ -73,8 +73,6 @@ myPdf.addText("Something else is amidst");
 myPdf.newPage();
 myPdf.addHeader("Second Page!!!");
 
-myPdf.resetPdf();
-
-document.querySelector("#pdf-preview").src = myPdf.getPdfUrl();
+myPdf.showPdf();
 
 console.log("hi", myPdf.getPdfUrl());
