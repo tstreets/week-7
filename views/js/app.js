@@ -48,6 +48,7 @@ class GeneratePdf {
   /**
    *
    * @param {string} text Content displayed in header
+   * @param {string} color Text color for header
    */
   addHeader(text, color = "black") {
     this.pdfDoc.setFontSize(16);
@@ -61,6 +62,7 @@ class GeneratePdf {
   /**
    *
    * @param {string} text Content for the paragraph
+   * @param {string} color Text color for paragraph
    */
   addText(text, color = "black") {
     this.pdfDoc.setTextColor(color);
