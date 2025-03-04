@@ -6,7 +6,7 @@ const WebFile = require("./functions/webfile");
 
 function app(req, res) {
   const reqWebFile = new WebFile(req.url);
-  const homepageUrls = ["/", "/index.html"];
+  // const homepageUrls = ["/", "/index.html"];
 
   if (fs.existsSync(reqWebFile.reqResource)) {
     res.writeHead(200, { "Content-Type": reqWebFile.getMimeType() });

@@ -1,4 +1,5 @@
 const path = require("path");
+const mime = require("mime-types");
 
 class WebFile {
   static mimeTypes = {
@@ -30,8 +31,8 @@ class WebFile {
   }
 
   getMimeType() {
-    const reqExt = this.reqDetails.ext;
-    return WebFile.mimeTypes[reqExt] || "text/html";
+    const reqExt = this.reqResource;
+    return mime.lookup(reqExt) || "text/plain";
   }
 }
 
